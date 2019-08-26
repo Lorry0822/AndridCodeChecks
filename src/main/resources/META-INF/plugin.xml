@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>cn.wj.plugins.AndroidCodeChecks</id>
     <name>AndroidCodeChecks</name>
-    <vendor email="w15555650921@gmail.com" url="http://www.yourcompany.com">Personal</vendor>
+    <vendor email="w15555650921@gmail.com" url="https://github.com/Lorry0822/AndridCodeChecks">Personal</vendor>
 
     <description><![CDATA[
     一个用于 Android 开发的代码检查插件；
