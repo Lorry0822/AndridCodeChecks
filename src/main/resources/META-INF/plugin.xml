@@ -13,10 +13,11 @@
     <!-- uncomment to enable plugin in all products
     <depends>com.intellij.modules.lang</depends>
     -->
+    <!--    <depends optional="true" config-file="withKotlin.xml">org.jetbrains.kotlin</depends>-->
 
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-    </extensions>
+    <!--    <extensions defaultExtensionNs="com.intellij">-->
+    <!--        <annotator language="JAVA" implementationClass="cn.wj.plugins.androidcodechecks.annotator.MyJavaAnnotator"/>-->
+    <!--    </extensions>-->
 
     <actions>
         <!-- Add your actions here -->
@@ -30,4 +31,19 @@
             </action>
         </group>
     </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider implementation="cn.wj.plugins.androidcodechecks.CustomInspectionProvider"/>
+    </extensions>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <project-components>
+        <component>
+            <implementation-class>cn.wj.plugins.androidcodechecks.CustomNotificationComponent</implementation-class>
+        </component>
+    </project-components>
+
 </idea-plugin>

@@ -1,0 +1,5 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="kotlin" implementationClass="cn.wj.plugins.androidcodechecks.annotator.MyKotlinAnnotator"/>
+    </extensions>
+</idea-plugin>
