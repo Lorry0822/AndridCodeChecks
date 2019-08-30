@@ -34,8 +34,7 @@ intellij {
 //}
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      第一个版本"""
 }
 
 wrapper {

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>cn.wj.plugins.AndroidCodeChecks</id>
     <name>AndroidCodeChecks</name>
-    <vendor email="w15555650921@gmail.com" url="https://github.com/Lorry0822/AndridCodeChecks">Personal</vendor>
+    <vendor email="w15555650921@gmail.com" url="https://github.com/Lorry0822/AndridCodeChecks">WangJie</vendor>
 
     <description><![CDATA[
     一个用于 Android 开发的代码检查插件；
@@ -15,7 +15,27 @@
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <inspectionToolProvider implementation="cn.wj.plugins.androidcodechecks.provider.CustomInspectionProvider"/>
+        <!-- Android 基本组件名称检查 -->
+        <localInspection
+                language="JAVA"
+                displayName="Android 基本组件子类名称必须包含组件名称"
+                shortName="AndroidComponentNameJava"
+                groupPath="Java"
+                groupBundle="messages.InspectionsBundle"
+                groupKey="group.names.probable.bugs"
+                enabledByDefault="true"
+                level="ERROR"
+                implementationClass="cn.wj.plugins.androidcodechecks.inspection.AndroidComponentNameJavaInspection"/>
+        <localInspection
+                language="kotlin"
+                displayName="Android 基本组件子类名称必须包含组件名称"
+                groupPath="Kotlin"
+                groupBundle="messages.InspectionsBundle"
+                shortName="AndroidComponentNameKotlin"
+                groupKey="group.names.probable.bugs"
+                enabledByDefault="true"
+                level="ERROR"
+                implementationClass="cn.wj.plugins.androidcodechecks.inspection.AndroidComponentNameKotlinInspection"/>
     </extensions>
 
 </idea-plugin>
