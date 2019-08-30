@@ -8,38 +8,14 @@
     支持 Java、Kotlin、Xml 等。
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <!--    <idea-version since-build="191"/>-->
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    <depends>org.jetbrains.kotlin</depends>
 
     <actions>
         <!-- Add your actions here -->
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!--        <inspectionToolProvider implementation="cn.wj.plugins.androidcodechecks.CustomInspectionProvider"/>-->
-        <localInspection implementationClass="cn.wj.plugins.androidcodechecks.CamelcaseInspection"
-                         displayName="xxxxxxxx"
-                         groupPath="Kotlin"
-                         groupName="Redundant constructs"
-                         enabledByDefault="true"
-                         level="WARNING"
-                         language="kotlin"/>
+        <inspectionToolProvider implementation="cn.wj.plugins.androidcodechecks.provider.CustomInspectionProvider"/>
     </extensions>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>org.jetbrains.kotlin</depends>
-
-    <project-components>
-        <component>
-            <implementation-class>cn.wj.plugins.androidcodechecks.CustomNotificationComponent</implementation-class>
-        </component>
-    </project-components>
 
 </idea-plugin>
